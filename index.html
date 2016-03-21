@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>CQ for front end developers</title>
+		<meta name="description" content="CQ for front end developers">
+		<meta name="author" content="Olena Svietlova">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/epam.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+				<!-- SECTION 0 -->
+				<section class="has-dark-background-custom" data-state="cover-page" data-background="img/lake-view.jpg" data-background-size="cover" style="text-align: left;">
+					<img width="204" height="75" class="plain" data-src="img/epam-logo.png" alt="EPAM">
+					<h1><span class="emphasize">CQ5</span> for frontend developers</h1>
+					<p><small>by Olena Svietlova</small></p>
+					<p class="lecture-date"><small>March 23, 2016</small></p>
+				</section>
+
+				<!-- SECTION 1 -->
+				<section>
+					<h2>What is CQ5<sup><small>*</small></sup>?</h2>
+					<p class="fragment"><strong>Web Content Management System (WCMS)</strong><br>
+						<small>It runs on Java based server and is platform independent.<br>
+							It is one of the Adobe Marketing Cloud products which also includes Adobe Analytics, Adobe Target, Adobe Social, etc. and meant for large scale businesses.</small>
+					</p>
+					<p class="note">* <strong>C</strong>ommuni<strong>q</strong>ué5, or Adobe Experience Manager</p>
+				</section>
+
+				<!-- SECTION 2 -->
+				<section data-transition="fade">
+					<h2>Main features</h2>
+					<small><ul class="fragment fade-up">
+						<li>Create reusable components and templates</li>
+						<li>Multilingual support, multisite management</li>
+						<li>The web-based user interface using AJAX (drag-and-drop, in-place editing)</li>
+						<li>User groups, workflows, content tagging</li>
+						<li>Author and Publish instances, clustering</li>
+						<li>Marketing campaigns management</li>
+						<li>Integration with eCommerce systems and other Marketing Cloud products<br>
+							<span style="display: block;text-align: center;">
+								<img width="640" height="74" class="plain" data-src="img/adobe-marketing-cloud.png" alt="Adobe Marketing Cloud Products">
+							</span>
+						</li>
+					</ul>
+					<p class="fragment"><br><strong>Software with similar features:</strong><br>
+						Oracle WebCenter, Liferay Sites, WordPress, Drupal, Joomla!</p></small>
+				</section>
+
+				<!-- SECTION 3 -->
+				<section>
+					<section>
+						<h2>Yet another CMS?</h2>
+						<p class="fragment">Enterprise Edition</p>
+					</section>
+					<section>
+						<h3>AUTHORING AND PUBLISHING</h3>
+						<img width="640" height="256" class="plain" data-src="img/authoring.png" alt="AEM authoring">
+					</section>
+					<section>
+						<h3>Java <span style="color: #a3c644">C</span>ontent <span style="color: #a3c644">R</span>epository e<span style="color: #a3c644">X</span>treme (CRX)</h3>
+						<p><small>object database that processes hierarchical data and stores metadata in xml</small></p>
+						<aside class="notes">it also provides versioning</aside>
+					</section>
+					<section>
+						<h3>Digital Asset Management (DAM)</h3>
+						<p>Adobe Scene7 integration &ndash; <small>a Content Delivery Network or Content Distribution Network (CDN)</small></p>
+					</section>
+				</section>
+
+				<!-- SECTION 4 -->
+				<section>
+					<h2>Getting started</h2>
+				</section>
+
+				<!-- SECTION 5 -->
+				<section>
+					<h3>Local CQ setup</h3>
+					<small>
+						<ul>
+							<li>Install Java Development Kit (JDK) 1.7+</li>
+							<li>Install Apache Maven (build tool for Java projects)</li>
+							<li>Add path to the bin directory in the unpacked maven distributive<br> to system environment variable PATH</li>
+							<li>Download CQ instance. Start it by double clicking .jar file<br>
+								<img width="607" height="200" class="plain" data-src="img/cq-start.jpg" alt="CQ starting window">
+							</li>
+							<li>Clone the project repository and checkout develop branch</li>
+							<li>Build and deploy the project:</li>
+						</ul>
+					</small>
+				</section>
+
+				<!-- SECTION 6 -->
+				<section>
+					<section data-background="img/cq-login.jpg" data-background-size="contain">
+					</section>
+					<section data-background="img/cq-UI-classic.jpg" data-background-size="contain">
+					</section>
+					<section data-background="img/cq-UI-touch.jpg" data-background-size="contain">
+					</section>
+				</section>
+
+				<!-- SECTION 7 -->
+				<section>
+					<section>
+						<h2>File structure</h2>
+					</section>
+					<section data-background="img/file-structure.png" data-background-size="contain">
+					</section>
+					<section>
+						<p>Base path for front-end development:</p>
+						<pre><code class="hljs">cq/project-name-view/src/main/content/jcr_root/</code></pre>
+					</section>
+					<section data-background="img/file-structure-pages.png" data-background-size="contain" data-background-position="10% 50%">
+						<h2 class="shift-right">CQ pages</h2>
+						<!--<pre><code class="hljs xml">-->
+						<!--<?xml version="1.0" encoding="UTF-8"?>-->
+						<!--<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"-->
+						<!--xmlns:cq="http://www.day.com/jcr/cq/1.0"-->
+						<!--xmlns:jcr="http://www.jcp.org/jcr/1.0"-->
+						<!--jcr:description="Home Page"-->
+						<!--jcr:primaryType="cq:Component"-->
+						<!--jcr:title="Home Page"-->
+						<!--sling:resourceSuperType="marks/pages/abstract-page"/>-->
+						<!--</code></pre>-->
+						<img width="550" src="img/page-content-xml.png" class="plain shift-right" alt="Page .content.xml">
+					</section>
+					<section data-background="img/file-structure-components.png" data-background-size="contain" data-background-position="10% 50%">
+						<h2 class="shift-right">CQ components</h2>
+						<img width="550" src="img/component-content-xml.png" class="plain shift-right" alt="Component .content.xml">
+					</section>
+				</section>
+
+				<!-- SECTION 8 -->
+				<section>
+					<section>
+						<h2>Development Tools</h2>
+						<ul>
+							<li>Integrated Development Environment</li>
+							<li>Build tools <small>(maven, grunt/gulp)</small>
+							</li>
+							<li>Version control system <small>(git, svn)</small>
+							</li>
+							<li>Front-end tools <small>(node, npm, etc)</small>
+								<p class="fragment"><small>Note: CQ has a built-in less compiler</small></p>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Build & Deploy</h2>
+						<p><strong>Build and deploy whole project:</strong></p>
+						<pre><code class="hljs">mvn clean install -P deploy-code,deploy-content</code></pre>
+
+						<p><strong>Build and deploy all code:</strong></p>
+						<pre><code class="hljs">mvn clean install -P deploy-code</code></pre>
+
+						<p><strong>Build and deploy content:</strong></p>
+						<pre><code class="hljs">mvn clean install -P deploy-content</code></pre>
+
+						<p><strong>To deploy specific bundle or package:</strong></p>
+						<pre><code class="hljs">mvn clean install -P auto-deploy</code></pre>
+						<p>on specific sub-project to build and deploy it.</p>
+					</section>
+					<section>
+						<h2>crxde-pipe plug-in</h2>
+						<p>Simple tool for piping local changes to CQ (CRXDE)</p>
+						<p><small>Install</small></p>
+						<pre><code class="hljs json">$ npm install crxde-pipe -g</code></pre>
+						<p><small>Run</small></p>
+						<pre><code class="hljs json">$ crxde-pipe path/to/project/src</code></pre>
+						<p class="fragment note">Developed by <a href="mailto:Yurii_Sorokin@epam.com">Yurii_Sorokin@epam.com</a></p>
+					</section>
+					<section>
+						<h2>grunt-slang plug-in</h2>
+						<pre><code class="hljs json">...
+watch: {
+  author: {
+    files: ['<%= pathTo.jcrRoot %>**/*.{css,xml,html,js,jsp,txt}'],
+    tasks: ['slang:author']
+  }
+},
+slang: {
+  author: {
+    options: {
+      port: '4502'
+    }
+  }
+}
+...</code></pre>
+					</section>
+					<section data-background="img/cq-crxde.jpg" data-background-size="contain">
+						<h2><br><br>CRXDE Lite</h2>
+						<p><small>for developing right in the browser</small></p>
+					</section>
+				</section>
+
+				<!-- SECTION 9 -->
+				<section>
+					<section>
+						<h2>Clientlibs</h2>
+						<p><small>js and css files can be concatenated by CQ:</small></p>
+						<ul>
+							<li>into one or several files</li>
+							<li>based on abstract categorisation described in .xml</li>
+							<li>each category can be included to particular page</li>
+						</ul>
+					</section>
+				</section>
+
+				<!-- SECTION 10 -->
+				<section>
+					<h2>Things to consider</h2>
+					<ul>
+						<li>CQ wraps components into additional &lt;div class="component-file-name"></li>
+						<li>CQ adds default classes to wrappers (.section, .par-sys ...)</li>
+						<li>Clientlibs are publicly accessible only when served from particular directories</li>
+						<li>CQ also has its own cache</li>
+					</ul>
+				</section>
+
+                <!-- SECTION 11 -->
+				<section>
+					<h2>WHERE TO LEARN MORE?</h2>
+					<ul>
+						<li><a href="https://docs.adobe.com/docs/en/cq/5-6-1.html">Adobe Experience Manager docimentation</a></li>
+						<li><a href="https://adobecq5interviewquestions.wordpress.com/cq5-video-school/">CQ5 Video School</a></li>
+						<li>CQ based sites: <a href="http://www.chevrolet.com/">Shevrolet</a>, <a href="http://www.nike.com">Nike</a></li>
+					</ul>
+				</section>
+
+				<!-- SECTION 12 -->
+				<section style="text-align: left;">
+					<h1>THANK YOU!</h1>
+					<p>
+						Any other questions?<br>
+						<a href="mailto:olena_svietlova@epam.com">mailto: olena_svietlova@epam.com</a>
+					</p>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+		<script src="//localhost:35729/livereload.js"></script>
+	</body>
+</html>

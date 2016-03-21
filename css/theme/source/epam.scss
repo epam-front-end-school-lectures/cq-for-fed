@@ -1,0 +1,125 @@
+/**
+ * Epam theme for reveal.js.
+ */
+
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url(../../lib/font/oswald/oswald.css);
+
+
+// Override theme settings (see ../template/settings.scss)
+// =======================================================
+// PRIMARY COLORS
+$sharpBlue: #39c2d7;
+$limeGreen: #a3c644;
+$graphite: #464547;
+$white: #fff;
+
+// SECONDARY COLORS
+$raspberry: #b22746;
+
+$backgroundColor: $white;
+
+$mainColor: $graphite;
+$headingColor: $graphite;
+
+$mainFontSize: 38px;
+$mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Oswald', Helvetica, sans-serif;
+$headingTextShadow: none;
+$heading1TextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: $sharpBlue;
+$linkColorHover: lighten( $linkColor, 10% );
+$selectionBackgroundColor: lighten( $linkColor, 20% );
+
+$secondaryLinkColor: #7F993A;
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+// Custom template ------------------------------
+@import "../template/custom";
+// ---------------------------------------------
+
+
+section.has-dark-background,
+section.has-dark-background-custom {
+    &, h1, h2, h3, h4, h5, h6 {
+        color: $white;
+    }
+
+    a {
+        color: $white;
+    }
+}
+
+.cover-page {
+    h1 {
+        margin-bottom: 0.5em;
+        text-shadow: 0 1px 2px rgba(#000, .5);
+    }
+
+    .emphasize {
+        float: left;
+        margin-top: -0.07em;
+        margin-left: -0.025em;
+        color: $limeGreen;
+        font-size: 2.33em;
+        text-shadow: 0 1px 1px rgba(#000, .4);
+    }
+
+    .lecture-date {
+        color: $sharpBlue;
+    }
+}
+
+.reveal {
+    .note {
+        margin-top: 2.5em;
+        font-size: 0.5em;
+    }
+
+    blockquote {
+        margin-bottom: 2em;
+        padding-left: 5em;
+        width: auto;
+        box-shadow: none;
+        text-align: left;
+
+        &:before {
+            content: '“';
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translateY(-20%);
+            color: $sharpBlue;
+            font-size: 10em;
+        }
+    }
+
+    .cite-author {
+        font-size: 0.8em;
+        text-align: right;
+    }
+
+    .shift-right {
+        padding-left: 5em;
+    }
+}
